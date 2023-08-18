@@ -41,7 +41,7 @@ class DiscordAuth extends AuthProvider {
 			$scopes[] = 'email';
 		}
 
-		$authUrl = $this->provider->getAuthorizationUrl([ 'scope' => $scopes]);
+		$authUrl = $this->provider->getAuthorizationUrl( [ 'scope' => $scopes, 'prompt' => 'none' ] );
 
 		$secret = $this->provider->getState();
 
